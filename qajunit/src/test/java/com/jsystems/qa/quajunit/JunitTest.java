@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Junit test")
 @Tag("unit")
+
 public class JunitTest extends ConfigJunit {
 
     @BeforeEach
