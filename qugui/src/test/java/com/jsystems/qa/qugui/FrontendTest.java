@@ -18,6 +18,7 @@ public class FrontendTest extends ConfigFrontend {
 
     WebElement textElement_2 = driver.findElement(By.cssSelector(".lpc-headline-title.lp-headline-title span:nth-child(2)"));
     String text2 = textElement_2.getText();
+
     assertTrue(text2.matches("\\d+(% of the internet.)"));
 
     try{
