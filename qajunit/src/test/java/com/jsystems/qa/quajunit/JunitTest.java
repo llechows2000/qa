@@ -53,6 +53,24 @@ public class JunitTest extends ConfigJunit {
         assertTrue(result == 0.04);
         //assertTrue(new BigDecimal("0.2").multiply(new BigDecimal("0.2")).doubleValue());
     }
+
+    @Test
+    public void stringTest(){
+        String simpleString = "simpleString";
+        String simple = "simpleString";
+        String simpleString_2 = new String("simpleString");
+        String simpleString_3 = new String("simpleString");
+        assertTrue(simpleString == "simpleString");
+        assertTrue(simpleString == simple);
+        assertFalse(simpleString == simpleString_2);
+        assertFalse(simpleString_2 == simpleString_3);
+        assertTrue(simpleString.equals(simple));
+        assertTrue(simpleString_2.equals(simpleString_3));
+        int a = 1;
+        Integer a_1 = 1;
+
+    }
+
     @Nested
     public class NestedTest {
 
