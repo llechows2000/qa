@@ -12,7 +12,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Junit test")
 @Tag("unit")
-public class JunitTest {
+public class JunitTest extends ConfigJunit {
+
+    @BeforeEach
+    public void setupEach(TestInfo testInfo) {
+        System.out.println("===================BeforeEach===========================");
+        System.out.println(testInfo.getDisplayName());
+        System.out.println(testInfo.getTags());
+        System.out.println(testInfo.getTestMethod());
+    }
+    @AfterEach
+    public void tearDownEach(){
+        System.out.println("=====================AfterEach==========================");
+    }
 
     final String stringTestowy = "stringTestowy";
 
