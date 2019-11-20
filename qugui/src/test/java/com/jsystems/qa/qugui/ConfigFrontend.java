@@ -30,8 +30,8 @@ public class ConfigFrontend {
 
     @BeforeAll
     public static void setUpAll() {
-//        WebDriverManager.chromedriver().setup();
-        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.firefoxdriver().setup();
     }
 
     @BeforeEach

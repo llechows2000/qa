@@ -1,7 +1,10 @@
 package com.jsystems.qa.qugui;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -9,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static com.google.common.truth.Truth.assertThat;
 import static junit.framework.TestCase.assertTrue;
 
+@Tag("FrontTest")
 public class FrontendTest extends ConfigFrontend {
 
   @Test
