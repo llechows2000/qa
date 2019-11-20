@@ -1,5 +1,6 @@
 package com.jsystems.qa.qugui;
 
+import com.jsystems.qa.qugui.page.MainWordpressPage;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -16,13 +17,16 @@ public class FrontendTest extends ConfigFrontend {
 
   @Test
   public void frontTest() {
-    driver.get("https://wordpress.com/");
-    WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
-    String text1 = textElement_1.getText();
+    //driver.get("https://wordpress.com/");
+    driver.get(Configuration.BASE_URL);
+  //  WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
+    MainWordpressPage mainWordpressPage = new MainWordpressPage(driver);
+  //  String text1 = textElement_1.getText();
+    String text1 = mainWordpressPage.textElement_1.getText();
     assertTrue(text1.equals("WordPress powers"));
 
-    WebElement textElement_2 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(2)"));
-    String text2 = textElement_2.getText();
+  //  WebElement textElement_2 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(2)"));// String text2 = textElement_2.getText();
+    String text2 = mainWordpressPage.textElement_2.getText();
     assertTrue(text2.contains("% of the internet."));
     assertThat(text2).matches("\\d+(% of the internet.)");
 
@@ -31,7 +35,8 @@ public class FrontendTest extends ConfigFrontend {
   @Test
   public void loginTest() {
 
-    driver.navigate().to("https://www.wordpress.com/");
+    //driver.navigate().to("https://www.wordpress.com/");
+    driver.navigate().to(Configuration.BASE_URL);
 
     String loginIconSelector = ".x-nav-item.x-nav-item--wide.x-nav-item--logged-in";
     WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -49,7 +54,8 @@ public class FrontendTest extends ConfigFrontend {
     WebElement usernameInput = driver.findElement(By.id(usernameOrEmailSelector));
 
     usernameInput.clear();
-    usernameInput.sendKeys("testautomation112019");
+    //usernameInput.sendKeys("testautomation112019");
+    usernameInput.sendKeys(Configuration.LOGIN);
 
     String primaryButtonSelector = ".button.form-button.is-primary";
     wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
@@ -60,7 +66,9 @@ public class FrontendTest extends ConfigFrontend {
     WebElement inputPassword = driver.findElement(By.id("password"));
 
     inputPassword.clear();
-    inputPassword.sendKeys("testautomation");
+    //inputPassword.sendKeys("testautomation");
+    inputPassword.sendKeys(Configuration.PASSWORD);
+
     wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
     WebElement buttonPassword = driver.findElement(By.cssSelector(primaryButtonSelector));
     usernameButton.click();
@@ -77,7 +85,8 @@ public class FrontendTest extends ConfigFrontend {
     WebElement userDisplayName = driver.findElement(By.cssSelector(userDisplayNameSelector));
     String userDisplayNameText = userDisplayName.getText();
 
-    assertThat(userDisplayNameText).isEqualTo("testautomation112019");
+    //assertThat(userDisplayNameText).isEqualTo("testautomation112019");
+    assertThat(userDisplayNameText).isEqualTo(Configuration.LOGIN);
 
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(primaryButtonSelector)));
     WebElement saveUserDetailsButton = driver.findElement(By.cssSelector(primaryButtonSelector));
