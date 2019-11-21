@@ -1,4 +1,4 @@
-package com.jsystems.qa.qugui.page;
+package com.jsystems.qa.qugui.cucumber.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-    public WebDriver driver;
+
+    protected WebDriver driver;
     private WebDriverWait wait;
 
     public BasePage(WebDriver driver) {

@@ -1,5 +1,6 @@
-package com.jsystems.qa.qugui.page;
+package com.jsystems.qa.qugui.cucumber.page;
 
+import com.jsystems.qa.qugui.classic.page.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

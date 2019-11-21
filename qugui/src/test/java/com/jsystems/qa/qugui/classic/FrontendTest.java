@@ -1,20 +1,20 @@
-package com.jsystems.qa.qugui;
+package com.jsystems.qa.qugui.classic;
 
-import com.jsystems.qa.qugui.page.LoginPage;
-import com.jsystems.qa.qugui.page.MainWordpressPage;
-import com.jsystems.qa.qugui.page.UserPage;
+import com.jsystems.qa.qugui.Configuration;
+import com.jsystems.qa.qugui.classic.page.LoginPage;
+import com.jsystems.qa.qugui.classic.page.MainWordpressPage;
+import com.jsystems.qa.qugui.classic.page.UserPage;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static com.google.common.truth.Truth.assertThat;
-import static com.jsystems.qa.qugui.page.LoginPage.*;
-import static com.jsystems.qa.qugui.page.LoginPage.primaryButtonSelector;
-import static com.jsystems.qa.qugui.page.MainWordpressPage.loginIconSelector;
-import static com.jsystems.qa.qugui.page.UserPage.*;
+import static com.jsystems.qa.qugui.classic.page.LoginPage.*;
+import static com.jsystems.qa.qugui.classic.page.LoginPage.primaryButtonSelector;
+import static com.jsystems.qa.qugui.classic.page.MainWordpressPage.loginIconSelector;
+import static com.jsystems.qa.qugui.classic.page.UserPage.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

@@ -1,7 +1,8 @@
-package com.jsystems.qa.qugui;
+package com.jsystems.qa.qugui.classic;
 
-import com.jsystems.qa.qugui.page.LoginPage;
-import com.jsystems.qa.qugui.page.MainWordpressPage;
+import com.jsystems.qa.qugui.Configuration;
+import com.jsystems.qa.qugui.classic.page.LoginPage;
+import com.jsystems.qa.qugui.classic.page.MainWordpressPage;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;

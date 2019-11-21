@@ -1,11 +1,10 @@
-package com.jsystems.qa.qugui.page;
+package com.jsystems.qa.qugui.cucumber.page;
 
+import com.jsystems.qa.qugui.classic.page.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import static com.jsystems.qa.qugui.page.LoginPage.primaryButtonSelector;
 
 public class UserPage extends BasePage {
     public UserPage(WebDriver driver) {

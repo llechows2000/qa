@@ -1,4 +1,4 @@
-package com.jsystems.qa.qugui;
+package com.jsystems.qa.qugui.classic;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

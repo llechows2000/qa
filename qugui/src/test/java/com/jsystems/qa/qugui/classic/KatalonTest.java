@@ -1,4 +1,4 @@
-package com.jsystems.qa.qugui;
+package com.jsystems.qa.qugui.classic;
 
 import org.junit.After;
 import org.junit.Before;
