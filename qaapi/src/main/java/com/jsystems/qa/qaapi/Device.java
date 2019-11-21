@@ -10,5 +10,5 @@ public class Device {
     public String type;
 
     @JsonProperty(value = "device.model", required = true)
-    List<DeviceModel> deviceModel;
+    public List<DeviceModel> deviceModel;
 }
